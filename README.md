@@ -1,8 +1,9 @@
 # TempMailDcBot
 
 Temp mail bot. It is generate a temporary mail for you by api
-
-[![Deploy](https://heroku.com/deploy?template=https://github.com/Venom-X-Bots/LILY-MAIL)
+<a href="https://heroku.com/deploy?template=https://github.com/Venom-X-Bots/LILY-MAIL">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
  
 Do you want to make like this!?
 
