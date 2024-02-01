@@ -36,17 +36,17 @@ app = Client(
 
 #********************************************************************************
 start_text = """
-Hello! {}, 
-I can create **temp emails** for you. Send /new to **create new mail** !
+ʜᴇʏ! {}, 
+ɪ ᴄᴀɴ ᴄʀᴇᴀᴛᴇ **ᴛᴇᴍᴘ ᴇᴍᴀɪʟ** ғᴏʀ ʏᴏᴜ. sᴇɴᴅ /new ᴛᴏ **ᴄʀᴇᴀᴛᴇ ɴᴇᴡ ᴍᴀɪʟ** !
 
 **Advantages**
-   • None Blacklisted Domains(Fresh Domains).
-   • [API](https://www.1secmail.com/api/v1/) base Email box .
-   • 24 hours Active (paid hosting).
+   • ɴᴏɴᴇ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴅᴏᴍᴀɪɴᴇ(ғʀᴇsʜ ᴅᴏᴍᴀɪɴs).
+   • [API](https://www.1secmail.com/api/v1/) ʙᴀsᴇ ᴇᴍᴀɪʟ ʙᴏx .
+   • 𝟸𝟺 ʜᴏᴜʀs ᴀᴄᴛɪᴠᴇ (ᴘᴀɪᴅ ʜᴏsᴛɪɴɢ).
 
-Send /domains to get list of Available Domains.
+sᴇɴᴅ /domains ᴛᴏ ɢᴇᴛ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ᴅᴏᴍᴀɪɴs.
 
-**Developer** : @selfiebd | @Groupdcbots 
+**ᴅᴇᴠᴇʟᴏᴘᴇʀ** : @its_Aryaan
 """
 
 CHANNEL_ID = int(os.environ['CHANNEL_ID'])
@@ -56,11 +56,11 @@ OWNER = int(os.environ['OWNER'])
 start_button = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/Groupdcs"),
-                    InlineKeyboardButton("🗣 Channel", url="https://t.me/Groupdcbots")
+                    InlineKeyboardButton("👥 ɢʀᴏᴜᴘ", url="https://t.me/+eOndzGjht5FhNGY1"),
+                    InlineKeyboardButton("🗣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/Thecchub")
                 ],
 		        [
-                    InlineKeyboardButton("➕ Add to Your Group ➕", url=f"http://t.me/TempMailDcBot?startgroup=new"),
+                    InlineKeyboardButton("➕ Add to Your Group ➕", url=f"http://t.me/TempMailX_Lily_bot?startgroup=new"),
                 ]    
             ]
 )
@@ -73,9 +73,9 @@ async def start(_, message: Message):
        await app.send_message(
 			chat_id=message.from_user.id,
 			text=f"""
-🚧 **Access Denied** {message.from_user.mention}
-You must,
-🔹[join Our Telegram Channel](https://t.me/{CHANNEL}).
+🚧 **ᴀᴄᴄᴇss ᴅᴇɴɪᴇᴅ** {message.from_user.mention}
+ʏᴏᴜ ᴍᴜsᴛ,
+🔹[ᴊᴏɪɴ ᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ᴄʜᴀɴɴᴇʟ](https://t.me/{CHANNEL}).
 """)
        return
     name = message.from_user.id
@@ -99,7 +99,7 @@ API3='https://www.1secmail.com/api/v1/?action=readMessage&login='
 #********************************************************************************
 
 create = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Groupdcbots ⚡", url="https://t.me/groupdcbots")]])
+            [[InlineKeyboardButton("ɢʀᴏᴜᴘ ⚡", url="https://t.me/+eOndzGjht5FhNGY1")]])
 
 #********************************************************************************
 @app.on_message(filters.command("new"))
@@ -114,11 +114,11 @@ async def fakemailgen(_, message: Message):
     mes = await app.send_message(
     name, 
     text = f"""
-**📬 Done,Your Email Address Created!**
-📧 **Email** : `{email}@{domain}`
-📨 **Mail BOX** : `empty`
-♨️ **Powered by** : @groupdcbots """,
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("♻️ Update Mail BOX ♻️", callback_data = f"mailbox |{email}|{domain}")]]))
+**📬 ᴅᴏɴᴇ,ʏᴏᴜʀ ᴇᴍᴀɪʟ ᴀᴅᴅʀᴇss ᴄʀᴇᴀᴛᴇᴅ!**
+📧 **ᴇᴍᴀɪʟ** : `{email}@{domain}`
+📨 **ᴍᴀɪʟ ʙᴏx** : `empty`
+♨️ **ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴠᴇɴᴏᴍ** : @its_Aryaan """,
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("♻ ᴜᴘᴅᴀᴛᴇ ᴍᴀɪʟ BOX ♻", callback_data = f"mailbox |{email}|{domain}")]]))
     pi = await mes.pin(disable_notification=True, both_sides=True)
     await m.delete()
     await pi.delete()
@@ -134,7 +134,7 @@ async def gen_keyboard(mails, email, domain):
         )
         num += 1
     data.append(
-        InlineKeyboardButton(f"Update Mail BOX ♻️", f"mailbox |{email}|{domain}")
+        InlineKeyboardButton(f"ᴜᴘᴅᴀᴛᴇ ᴍᴀɪʟ ʙᴏx ♻", f"ᴍᴀɪʟʙᴏx |{email}|{domain}")
     )
     i_kbd.add(*data)
     return i_kbd
@@ -148,20 +148,20 @@ async def mail_box(_, query : CallbackQuery):
     m, email , domain = callback_request.split("|")
     mails = requests.get(f'{API2}{email}&domain={domain}').json()
     if mails == []:
-            await query.answer("🤷‍♂️ No Mails found! 🤷‍♂️")
+            await query.answer("🤷‍♂️ ɴᴏ ᴍᴀɪʟs ғᴏᴜɴᴅ! 🤷‍♂️")
     else:
         try:
             smail = f"{email}@{domain}"
             mbutton = await gen_keyboard(mails,email, domain)
             await query.message.edit(f""" 
-**📬 Done,Your Email Address Created!**
-📧 **Email** : `{smail}`
-📨 **Mail BOX** : ✅
-**♨️ Powered by** : @Groupdcbots""",
+**📬 ᴅᴏɴᴇ,ʏᴏᴜʀ ᴇᴍᴀɪʟ ᴀᴅᴅʀᴇss ᴄʀᴇᴀᴛᴇᴅ!**
+📧 **ᴇᴍᴀɪʟ** : `{smail}`
+📨 **ᴍᴀɪʟ ʙᴏx** : ✅
+**♨️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴠᴇɴᴏᴍ** : @its_Aryaan""",
 reply_markup = mbutton
 )   
         except bad_request_400.MessageNotModified as e:
-            await query.answer("🤷‍♂️ No New Mails found! 🤷‍♂️")
+            await query.answer("ɴᴏ ɴᴇᴡ ᴍᴀɪʟ ғᴏᴜɴᴅ!")
 
 #********************************************************************************
 
@@ -184,17 +184,17 @@ async def mail_box(_, query : CallbackQuery):
         mbutton = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔗 Open Link", url=link)
+                    InlineKeyboardButton("ᴏᴘᴇɴ ʟɪɴᴋ", url=link)
                 ],
                 [
-                    InlineKeyboardButton("Back", f"mailbox |{email}|{domain}")
+                    InlineKeyboardButton("ʙᴀᴄᴋ", f"ᴍᴀɪʟʙᴏx |{email}|{domain}")
                 ]
             ]
         )
         await query.message.edit(f""" 
-**From:** `{froms}`
-**Subject:** `{subject}`   
-**Date**: `{date}`
+**ғʀᴏᴍ:** `{froms}`
+**sᴜʙᴊᴇᴄᴛ:** `{subject}`   
+**ᴅᴀᴛᴇ**: `{date}`
 {text}
 """,
 reply_markup = mbutton
@@ -204,7 +204,7 @@ reply_markup = mbutton
         mbutton = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Back", f"mailbox |{email}|{domain}")
+                    InlineKeyboardButton("ʙᴀᴄᴋ", f"ᴍᴀɪʟʙᴏx |{email}|{domain}")
                 ]
             ]
         )
@@ -254,10 +254,10 @@ async def stats(_, message: Message):
     await app.send_message(
         name,
         text=f"""
-🍀 Chats Stats 🍀
-🙋‍♂️ Users : `{len(served_users)}`
-👥 Groups : `{len(served_chats)}`
-🚧 Total users & groups : {int((len(served_chats) + len(served_users)))} """)
+🍀 ᴄʜᴀᴛs sᴛᴀᴛs 🍀
+🙋‍♂️ ᴜsᴇʀs : `{len(served_users)}`
+👥 ɢʀᴏᴜᴘs : `{len(served_chats)}`
+🚧 ᴛᴏᴛᴀʟ ᴜsᴇʀs & ɢʀᴏᴜᴘs : {int((len(served_chats) + len(served_users)))} """)
 
 async def broadcast_messages(user_id, message):
     try:
@@ -282,7 +282,7 @@ async def broadcast_messages(user_id, message):
 async def broadcast_message(_, message):
     b_msg = message.reply_to_message
     chats = await get_served_users() 
-    m = await message.reply_text("Broadcast in progress")
+    m = await message.reply_text("ʙʀᴏᴀᴅᴄᴀsᴛ ɪɴ ᴘʀᴏɢʀᴇss")
     for chat in chats:
         try:
             await broadcast_messages(int(chat['bot_users']), b_msg)
@@ -297,20 +297,10 @@ Broadcast Completed:.""")
 @app.on_message(filters.command("ads"))
 async def ads_message(_, message):
     await message.reply_text(
-"""     ♨️ Advertise On Telegram 🚀
+"""     ♨️ ᴀᴅᴠᴇʀᴛɪsᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ 🚀
 
-Want to promote anything ? 
+ᴡᴀɴᴛ ᴛᴏ ᴘʀᴏᴍᴏᴛᴇ ᴀɴʏᴛʜɪɴɢ ?  
+ᴅᴍ - @its_Aryaan
 
-MusicplayerdcBot & MediaautoSearchbot is here with your basic needs. We work in around 400 chats with thousand of userbase. One promotional broadcast reaches to thousands of peoples. 
-
-Want to promote your online business ? Want to get people engagement? We are here!
-
-Promote whatever you want at lowest and affordable prices.
-
-https://t.me/Groupdcs 
-
-🔥Your broadcast will reach group also so minimum 50k users see your message.
-""")
-
-print("I'm Alive Now!")
+print("ɪ'ᴍ ᴀʟɪᴠᴇ BABE💞🐼")
 app.run()
